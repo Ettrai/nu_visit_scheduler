@@ -1,8 +1,7 @@
-Faculties should not express more preferences than their available slots
+Faculties should not express more preferences than their available time slots
 
 Time slots are encoded in the following way:
     0 - 10.00 AM to 10.30 AM
     1 - 10.30 AM to 11.00 AM
     2 - 11.00 AM to 11.30 AM
     3 - 11.30 AM to 12.00 PM
-
