@@ -63,10 +63,13 @@ def load_faculties_time_slots():
 def print_faculty_data(faculty):
     print "Faculty Name:", faculty.get_name()
 
+    time_slots = faculty.time_slots
+    print "\tAvailable slots:", len(time_slots)
+
     if(faculty.schedule):
         schedule = faculty.schedule
         for index, entry in enumerate(schedule):
-            print "\tScheduled", time_slot.id_to_time_window(entry.id), "with", db.student_list[entry.matched_id]
+            print "\tScheduled from", time_slot.id_to_time_window(entry.id), "with", db.student_list[entry.matched_id]
 
     time_slots = faculty.time_slots
 

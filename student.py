@@ -57,17 +57,16 @@ def load_students_preferences():
 def print_student_data(student):
     print "Student Name:", student.get_name()
 
+    time_slots = student.time_slots
+    print "\tAvailable slots:", len(time_slots)
+
     if(student.schedule):
         schedule = student.schedule
         schedule.sort()
         for index, entry in enumerate(schedule):
-            print "\tScheduled", time_slot.id_to_time_window(entry.id), "with", db.faculty_list[entry.matched_id]
+            print "\tScheduled from", time_slot.id_to_time_window(entry.id), "with", db.faculty_list[entry.matched_id]
 
     preferences = student.preferences
     for index, entry in enumerate(preferences):
         print "\tUnmatched preference:", db.faculty_list[entry], "->",len(db.faculty_data[entry].time_slots),"available slots"
 
-    # print "\tTime Slots"
-    # time_slots = student.time_slots
-    # for entry in time_slots:
-    #     print "\t\tAvailable", time_slot.id_to_time_window(entry.id)
