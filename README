@@ -1,3 +1,7 @@
+Runs on Python 2.7
+
+You can try the scheduler by running main.py 
+
 Faculties should not express more preferences than their available time slots
 
 Time slots are encoded in the following way:
